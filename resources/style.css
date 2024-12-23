@@ -40,7 +40,6 @@ header {
     z-index: 1;
 }
 
-
 .navbar {
     padding: 0;
 }
@@ -169,19 +168,19 @@ header {
 }
 
 .about-image {
-    flex-basis: 40%;
+    flex-basis: 30%;
     /* Set the width of the image container */
     max-width: 300px;
 }
 
 .about-image img {
     width: 100%;
-    height: auto;
+    height: 100%;
     border-radius: 10px;
 }
 
 .about-text {
-    flex-basis: 50%;
+    flex-basis: 60%;
     /* Set the width of the text container */
     max-width: 400px;
 }
@@ -229,13 +228,14 @@ header {
     left: 50%;
     transform: translate(-50%, -50%);
     background-color: #fff;
-    padding: 20px;
+    padding: 5px;
     border-radius: 10px;
-    max-width: 600px;
-    max-height: 90vh;
+    width: 1000px;
+    height: 70vh;
     overflow-y: auto;
     /* Enable vertical scrolling when content exceeds max-height */
 }
+
 
 .popup-title {
     text-align: center;
@@ -252,6 +252,21 @@ header {
 }
 
 
+.about-image {
+    margin: 50px;
+    width: 50%; /* Increased image width for better prominence */
+  
+}
+
+.about-text {
+    margin:  -20px; /* Reduced margin to minimize the gap */
+    position: relative;
+    top: -50px; /* Move text slightly upwards */
+    width: 100%; /* Align text with image */
+    text-align: justify; /* Improve readability */
+    line-height: 1.4; /* Add slight line spacing */
+}
+
 .name {
     color: red;
     font-weight: bold;
@@ -267,6 +282,14 @@ header {
     /* Create a round shape */
     transition: background-color 0.2s;
     margin: 5px;
+}
+.about-image {
+    margin: 20px;
+    width: 100%;
+}
+.about-text {
+    margin: 10%;
+    top: 10%;
 }
 
 .about-me-btn:hover {
@@ -516,3 +539,27 @@ h2 {
 }
 
 @media (max-width:400px) {}
+/*  */
+
+.close-btn {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    background-color: #ff4757;
+    color: #ffffff;
+    border: none;
+    border-radius: 50%;
+    width: 30px;
+    height: 30px;
+    font-size: 1.5rem;
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+    transition: transform 0.3s ease;
+}
+
+.close-btn:hover {
+    transform: scale(1.1);
+}

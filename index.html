@@ -1,259 +1,267 @@
 <!DOCTYPE html>
 <html lang="en">
-
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>My Portfolio</title>
-    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" />
-    <link rel="stylesheet" href="resources/style.css">
-    <script>
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>My Portfolio</title>
+        <link href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+        <link rel="stylesheet" href="resources/style.css">
+        <script>
+            function closeAboutMe() {
+        document.getElementById('popup').style.display = 'none';
+    }
         function togglePopup() {
             var popup = document.getElementById("popup");
             popup.style.display = popup.style.display === "block" ? "none" : "block";
         }
-    </script>
-</head>
-
-<body>
-    <header>
-        <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
+        </script>
+    </head>
+    <body>
+        <header>
+            <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
+                <div class="container">
+                    <a class="navbar-brand" href="#">My Portfolio</a>
+                    <button
+                        class="navbar-toggler"
+                        type="button"
+                        data-toggle="collapse"
+                        data-target="#navbarNav"
+                        aria-controls="navbarNav"
+                        aria-expanded="false"
+                        aria-label="Toggle navigation"
+                    >
+                        <span class="navbar-toggler-icon"></span>
+                    </button>
+                    <div class="collapse navbar-collapse" id="navbarNav">
+                        <ul class="navbar-nav ml-auto">
+                            <li class="nav-item">
+                                <a class="nav-link" href="./index.html">Home</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="#about">About</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="#projects">Projects</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="#skills">Skills</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="#contact">Contact</a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </nav>
+        </header>
+        <section class="about-section bg-dark" id="about">
             <div class="container">
-                <!-- <a class="navbar-brand" href="#">My Portfolio</a> -->
-                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav"
-                    aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-                    <span class="navbar-toggler-icon"></span>
-                </button>
-                <div class="collapse navbar-collapse" id="navbarNav">
-                    <ul class="navbar-nav ml-auto">
-                        <li class="nav-item"><a class="nav-link" href="#home">Home</a></li>
-                        <li class="nav-item"><a class="nav-link" href="#about">About</a></li>
-                        <li class="nav-item"><a class="nav-link" href="#projects">Projects</a></li>
-                        <li class="nav-item"><a class="nav-link" href="#skills">Skills</a></li>
-                        <li class="nav-item"><a class="nav-link" href="#contact">Contact</a></li>
-                    </ul>
+                <button class="about-me-btn" onclick="togglePopup()">About Me</button>
+                <div class="about-info">
+                    <h1 style="color: white;">
+                        Hii,
+                        <span class="name">Saniya Anjum</span>
+                        <h5 style="color: white;">Full Stack Developer</h5>
+                    </h1>
                 </div>
-            </div>
-        </nav>
-
-    </header>
-
-
-    <section class="about-section bg-dark" id="about">
-        <div class="container">
-            <button class="about-me-btn" onclick="togglePopup()">About Me</button>
-            <div class="about-info">
-                <h1 style="color: white;"> Hii, <span class="name">Saniya Anjum</span>
-                    <h5 style="color: white;">Full Stack Developer</h5>
-                </h1>
-            </div>
-            <div class="resume-video">
-                <button class="btn">
-                    <a href="resources/pdf/Saniya_Anjum_Resume_vinsys .pdf" target="_blank">CV</a>
-                </button>
-
-                <button class="btn">
+                <div class="resume-video">
+                    <button class="btn">
+                        <a href="resources\pdf\Saniya_Anjum_Resume 1 (1).pdf" target="_blank">CV</a>
+                    </button>
+                    <!-- <button class="btn">
                     <a href="resources/video/RESUME/resume vid.mp4" target="_blank">Resume Video</a>
-                </button>
-            </div>
-        </div>
-    </section>
-
-    <div class="popup" id="popup">
-        <div class="popup-content">
-            <h2 class="popup-title">About Me</h2>
-            <div class="about-content">
-                <div class="about-image">
-                    <img src="./resources/images/img1.jpg" alt="My Image">
-                </div>
-                <div class="about-text">
-                    <!-- Your "About Me" section content goes here -->
-                    Hello, I'm Saniya Anjum, a passionate and detail-oriented Full Stack Developer based in Pune,
-                    Maharashtra. With a strong academic background in Bachelor of Engineering and specialization in
-                    Information Science Engineering, I bring a wealth of technical expertise to the table.
-
-                    I recently completed an intensive 16-week online program with Generation India and Vinsys, mastering
-                    HTML, CSS, JavaScript, React.js, Git, GitHub, and Spring Boot. I enjoy crafting dynamic e-commerce
-                    websites and have hands-on experience in front-end and back-end development.
-
-                    My creative mindset and positive attitude drive me to tackle challenges with enthusiasm. I thrive on
-                    staying updated with the latest trends in web development and I'm dedicated to delivering
-                    exceptional user experiences. My projects showcase my dedication to continuous
-                    learning and my ability to work independently to meet project goals.
-
-                    I'm eager to join a dynamic team where I can contribute my skills and passion for web development to
-                    create innovative solutions.
+                </button> -->
                 </div>
             </div>
+        </section>
+        <div class="popup" id="popup">
+            <div class="popup-content">
+                <h2 class="popup-title">
+                    <i>About Me</i>
+                </h2>
+                <div class="about-content">
+                    <div class="about-image">
+                        <img src="./resources/images/myimage1.jpg" alt="My Image">
+                    </div>
+                    <div class="about-text">
+                        <!-- Your "About Me" section content goes here -->
+                        <p>
+                            Hello, I'm Saniya Anjum, a dedicated and ambitious M.Tech student at Sharanabasva University, Gulbarga, specializing in cutting-edge IT technologies.
+                     With a Bachelor of Engineering degree in Information Science Engineering, I have a solid academic foundation and a strong passion for IT innovations.
+                        </p>
+                        <p>
+                            I have honed my technical skills through rigorous training and hands-on experience, mastering technologies such as HTML, CSS, JavaScript, React.js, Git, GitHub, and Spring Boot during an intensive 16-week program with Generation India and Vinsys.
+                My projects showcase my ability to craft dynamic, user-focused solutions and address IT challenges with creativity and a problem-solving mindset.
 
-            <button class="close-btn" onclick="togglePopup()">Close</button>
-        </div>
-    </div>
-
-
-    <section class="projects-section" id="projects">
-        <div class="container">
-            <h2 class="section-title"> Projects</h2>
-            <div class="row">
-
-                <div class="col-lg-4 mb-4">
-                    <div class="project-container">
-                        <img src="./resources/images/Projectsall/StoreCommerce.webp" alt="Project 1">
-                        <div class="project-info">
-                            <h3>Project 1</h3>
-                            <p>Description : Major project on E-commerce website using HTML,CSS,Javascript,Java and
-                                database using SpringBoot</p>
-                            <a href="https://11saniya.github.io/E-commerce-Website/" target="_blank"
-                                class="btn btn-primary mr-lg-5 ml-4">View Project</a>
-                            <a href="https://github.com/11Saniya/Ecommerce-App-" target="_blank"
-                                class="btn btn-primary ml-4">Code</a>
-                        </div>
+                I am deeply passionate about leveraging my technical expertise to excel in the IT industry and aspire to secure a position in leading organizations. 
+                Committed to continuous learning and delivering exceptional results, I am eager to join innovative teams and contribute to impactful IT solutions.
+                        </p>
                     </div>
                 </div>
-                <div class="col-lg-4 mb-4">
-                    <div class="project-container">
-                        <img src="./resources/images/Projectsall/resturant.jpeg" alt="Project 1">
-                        <div class="project-info">
-                            <h3>Project 1</h3>
-                            <p>Description: Static Resturant_Website using HTML and CSS</p>
-                            <a href="https://11saniya.github.io/Resturant_Website/" target="_blank"
-                                class="btn btn-primary mr-lg-5 ml-4">View Project</a>
-                            <a href="https://github.com/11Saniya/Resturant_Website" target="_blank"
-                                class="btn btn-primary ml-4">Code</a>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-lg-4 mb-4">
-                    <div class="project-container">
-                        <img src="./resources/images/Projectsall/list-students-javaguides.png" alt="Project 1">
-                        <div class="project-info">
-                            <h3>Project 1</h3>
-                            <p>Description:Mini-Project on Student registeration form performing CURD operation using
-                                SpringBoot </p>
-                            <a href="https://github.com/11Saniya/CRUD-Operation-Assigment" target="_blank" class="btn btn-primary mr-lg-5 ml-4">View Project</a>
-                            <a href="https://github.com/11Saniya/CRUD-Operation-Assigment" target="_blank"
-                                class="btn btn-primary ml-4 ">Code</a>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-lg-4 mb-4">
-                    <div class="project-container">
-                        <img src="./resources/images/Projectsall/teaCozy.png" alt="Project 1">
-                        <div class="project-info">
-                            <h3>Project 1</h3>
-                            <p>Description:Tea-cozy static website project on codeAcdemy using HTML and css</p>
-                            <a href="https://11saniya.github.io/Tea-Cozy-/" target="_blank"
-                                class="btn btn-primary mr-lg-5 ml-4">View Project</a>
-                            <a href="https://github.com/11Saniya/Tea-Cozy-" target="_blank"
-                                class="btn btn-primary ml-4">Code</a>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-lg-4 mb-4">
-                    <div class="project-container">
-                        <img src="./resources/images/Projectsall/excursion.png" alt="Project 1">
-                        <div class="project-info">
-                            <h3>Project 1</h3>
-                            <p>Description: CodeAcademy static website project using HTML and CSS</p>
-                            <a href="https://11saniya.github.io/Excursion-Project/" target="_blank"
-                                class="btn btn-primary mr-lg-5 ml-4">View Project</a>
-                            <a href="https://github.com/11Saniya/Excursion-Project" target="_blank"
-                                class="btn btn-primary ml-4">Code</a>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-lg-4 mb-4">
-                    <div class="project-container">
-                        <img src="./resources/images/Projectsall/calculatorjpeg.jpeg" alt="Project 1">
-                        <div class="project-info">
-                            <h3>Project 1</h3>
-                            <p>Description: Simple calcutor project using html, css and Javascript</p>
-                            <a href="https://11saniya.github.io/Calculator_project/" target="_blank"
-                                class="btn btn-primary mr-lg-5 ml-4">View Project</a>
-                            <a href="https://github.com/11Saniya/Calculator_project" target="_blank"
-                                class="btn btn-primary ml-4">Code</a>
-                        </div>
-                    </div>
-                </div>
-
+                <!-- <button class="close-btn" onclick="togglePopup()">X</button> -->
+                <button class="close-btn" onclick="closeAboutMe()">×</button>
             </div>
         </div>
-    </section>
-
-    <section class="skills-section" id="skills">
-        <div class="container">
-            <h2 class="section-title">Skills</h2>
-            <div class="skills-container" id="con">
-                <div class="skill" id="html">
-                    <i class="fab fa-html5"></i>
-                    <div class="certificate">
-                        <!-- HTML certificate content goes here -->
-                        <img src="./resources/certificates/html-certificate.jpg">
+        <section class="projects-section" id="projects">
+            <div class="container">
+                <h2 class="section-title"> Projects</h2>
+                <div class="row">
+                    <div class="col-lg-4 mb-4">
+                        <div class="project-container">
+                            <img src="./resources/images/Projectsall/StoreCommerce.webp" alt="Project 1">
+                            <div class="project-info">
+                                <h3>Project 1</h3>
+                                <p>
+                                    Description : Major project on E-commerce website using HTML,CSS,Javascript,Java and
+                                database using SpringBoot
+                                </p>
+                                <a href="https://11saniya.github.io/E-commerce-Website/" target="_blank" class="btn btn-primary mr-lg-5 ml-4">View Project</a>
+                                <a href="https://github.com/11Saniya/Ecommerce-App-" target="_blank" class="btn btn-primary ml-4">Code</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-4 mb-4">
+                        <div class="project-container">
+                            <img src="./resources/images/Projectsall/resturant.jpeg" alt="Project 1">
+                            <div class="project-info">
+                                <h3>Project 1</h3>
+                                <p>Description: Static Resturant_Website using HTML and CSS</p>
+                                <a href="https://11saniya.github.io/Resturant_Website/" target="_blank" class="btn btn-primary mr-lg-5 ml-4">View Project</a>
+                                <a href="https://github.com/11Saniya/Resturant_Website" target="_blank" class="btn btn-primary ml-4">Code</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-4 mb-4">
+                        <div class="project-container">
+                            <img src="./resources/images/Projectsall/list-students-javaguides.png" alt="Project 1">
+                            <div class="project-info">
+                                <h3>Project 1</h3>
+                                <p>
+                                    Description:Mini-Project on Student registeration form performing CURD operation using
+                                SpringBoot
+                                </p>
+                                <a href="https://github.com/11Saniya/CRUD-Operation-Assigment" target="_blank" class="btn btn-primary mr-lg-5 ml-4">View Project</a>
+                                <a href="https://github.com/11Saniya/CRUD-Operation-Assigment" target="_blank" class="btn btn-primary ml-4 ">Code</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-4 mb-4">
+                        <div class="project-container">
+                            <img src="./resources/images/Projectsall/teaCozy.png" alt="Project 1">
+                            <div class="project-info">
+                                <h3>Project 1</h3>
+                                <p>Description:Tea-cozy static website project on codeAcdemy using HTML and css</p>
+                                <a href="https://11saniya.github.io/Tea-Cozy-/" target="_blank" class="btn btn-primary mr-lg-5 ml-4">View Project</a>
+                                <a href="https://github.com/11Saniya/Tea-Cozy-" target="_blank" class="btn btn-primary ml-4">Code</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-4 mb-4">
+                        <div class="project-container">
+                            <img src="./resources/images/Projectsall/excursion.png" alt="Project 1">
+                            <div class="project-info">
+                                <h3>Project 1</h3>
+                                <p>Description: CodeAcademy static website project using HTML and CSS</p>
+                                <a href="https://11saniya.github.io/Excursion-Project/" target="_blank" class="btn btn-primary mr-lg-5 ml-4">View Project</a>
+                                <a href="https://github.com/11Saniya/Excursion-Project" target="_blank" class="btn btn-primary ml-4">Code</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-4 mb-4">
+                        <div class="project-container">
+                            <img src="./resources/images/Projectsall/calculatorjpeg.jpeg" alt="Project 1">
+                            <div class="project-info">
+                                <h3>Project 1</h3>
+                                <p>Description: Simple calcutor project using html, css and Javascript</p>
+                                <a href="https://11saniya.github.io/Calculator_project/" target="_blank" class="btn btn-primary mr-lg-5 ml-4">View Project</a>
+                                <a href="https://github.com/11Saniya/Calculator_project" target="_blank" class="btn btn-primary ml-4">Code</a>
+                            </div>
+                        </div>
                     </div>
                 </div>
-                <div class="skill" id="css">
-                    <i class="fab fa-css3"></i>
-                    <div class="certificate">
-                        <img src="./resources/certificates/css-certificate.jpg">
-                    </div>
-                </div>
-                <div class="skill" id="js">
-                    <i class="fab fa-js"></i>
-                    <div class="certificate">
-                        <img src="./resources/certificates/js-certificate.jpg">
-                    </div>
-                </div>
-                <div class="skill" id="React">
-                    <i class="fab fa-react"></i>
-                    <div class="certificate">
-                        <img src="./resources/certificates/React.jpg">
-                    </div>
-                </div>
-                <div class="skill" id="Java">
-                    <i class="fab fa-java"></i>
-                    <div class="certificate">
-                        <img src="./resources/certificates/java.jpg">
-                    </div>
-                </div>
-                <div class="skill" id="bootstrap">
-                    <i class="fab fa-bootstrap"></i>
-                    <div class="certificate">
-                        <img src="./resources/certificates/bootstrap.jpg">
-                    </div>
-                </div>
-
             </div>
-        </div>
-    </section>
-
-    <section class="contact-section" id="contact" style="height: 40px;">
-        <div class="container">
-            <h2 class="section-title" style="margin-top: -60px;">Contact</h2>
-            <ul class="contact-list">
-                <li><a href="tel:+91 7385481955" target="_blank"><i class="fa fa-phone"></i></a></li>
-                <li><a href="mailto:saniyaanjum142115@gmail.com" target="_blank"><i class="fa fa-envelope"></i></a>
-                </li>
-                <li><a href="https://github.com/11Saniya" target="_blank"><i class="fab fa-github"></i></a></li>
-                <li><a href="https://www.linkedin.com/in/saniya-anjum-742916187/" target="_blank"><i
-                            class="fab fa-linkedin"></i></a></li>
-            </ul>
-        </div>
-
-    </section>
-
-
-    <footer class="footer">
-        <div class="container">
-            <p>Copyright © 2023, by Saniya</p>
-        </div>
-    </footer>
-
-    <script src="resources/index.js"></script>
-    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.10.2/dist/umd/popper.min.js"></script>
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
-</body>
-
+        </section>
+        <section class="skills-section" id="skills">
+            <div class="container">
+                <h2 class="section-title">Skills</h2>
+                <div class="skills-container" id="con">
+                    <div class="skill" id="html">
+                        <i class="fab fa-html5"></i>
+                        <div class="certificate">
+                            <!-- HTML certificate content goes here -->
+                            <img src="./resources/certificates/html-certificate.jpg">
+                        </div>
+                    </div>
+                    <div class="skill" id="css">
+                        <i class="fab fa-css3"></i>
+                        <div class="certificate">
+                            <img src="./resources/certificates/css-certificate.jpg">
+                        </div>
+                    </div>
+                    <div class="skill" id="js">
+                        <i class="fab fa-js"></i>
+                        <div class="certificate">
+                            <img src="./resources/certificates/js-certificate.jpg">
+                        </div>
+                    </div>
+                    <div class="skill" id="React">
+                        <i class="fab fa-react"></i>
+                        <div class="certificate">
+                            <img src="./resources/certificates/React.jpg">
+                        </div>
+                    </div>
+                    <div class="skill" id="Java">
+                        <i class="fab fa-java"></i>
+                        <div class="certificate">
+                            <img src="./resources/certificates/java.jpg">
+                        </div>
+                    </div>
+                    <div class="skill" id="bootstrap">
+                        <i class="fab fa-bootstrap"></i>
+                        <div class="certificate">
+                            <img src="./resources/certificates/bootstrap.jpg">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section class="contact-section" id="contact" style="height: 40px;">
+            <div class="container">
+                <h2 class="section-title" style="margin-top: -60px;">Contact</h2>
+                <ul class="contact-list">
+                    <li>
+                        <a href="tel:+91 7385481955" target="_blank">
+                            <i class="fa fa-phone"></i>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="mailto:saniyaanjum142115@gmail.com" target="_blank">
+                            <i class="fa fa-envelope"></i>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="https://github.com/11Saniya" target="_blank">
+                            <i class="fab fa-github"></i>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="https://www.linkedin.com/in/saniya-anjum-742916187/" target="_blank">
+                            <i class="fab fa-linkedin"></i>
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        </section>
+        <footer class="footer">
+            <div class="container">
+                <p>Copyright © 2023, by Saniya</p>
+            </div>
+        </footer>
+        <script src="resources/index.js"></script>
+        <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+        <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.10.2/dist/umd/popper.min.js"></script>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    </body>
 </html>
